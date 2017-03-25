@@ -34,7 +34,6 @@ void Loader::loadFile(){
     ifstream myfile (m_filePath);
     if (myfile.is_open())
     {
-        int i = 0;
         while ( getline (myfile,line) )
         {
             m_listEnglish.push_back(line);
