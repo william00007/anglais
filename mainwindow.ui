@@ -50,7 +50,7 @@
      <string>Mot en Anglais : </string>
     </property>
    </widget>
-   <widget class="QLabel" name="label">
+   <widget class="QLabel" name="englishWord">
     <property name="geometry">
      <rect>
       <x>210</x>
@@ -60,7 +60,7 @@
      </rect>
     </property>
     <property name="text">
-     <string/>
+     <string>example</string>
     </property>
    </widget>
   </widget>
