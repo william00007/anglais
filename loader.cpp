@@ -37,7 +37,7 @@ void Loader::loadFile(){
         {
           m_listEnglish->push_back("ok");
         }
-        for(int i = 0 ; i< m_listEnglish->)
+//        for(int i = 0 ; i< m_listEnglish->)
         myfile.close();
       }
 
