@@ -8,5 +8,6 @@ int main(int argc, char *argv[])
     MainWindow w;
     w.show();
     Loader l((char*)"myDataBase.txt");
+//    std::vector<string> lol;
     return a.exec();
 }

@@ -9,7 +9,7 @@ class Loader
 {
 private:
     const char *m_filePath;
-    std::vector<string> *m_listEnglish;
+    std::vector<string> m_listEnglish;
 public:
     Loader(const char* filePath);
     inline bool fileExist () {
