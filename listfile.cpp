@@ -6,10 +6,10 @@ ListFile::ListFile(){
 }
 
 // Method(s)
-ListFile::getWord(int indice) {
+string ListFile::getWord(int indice) {
 
 }
 
-ListFile::searchWord(string word) {
+int ListFile::searchWord(string word) {
 
 }
