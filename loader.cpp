@@ -39,9 +39,9 @@ void Loader::loadFile(){
         {
             m_listEnglish.push_back(line);
         }
-        myfile.close();
 
-    }
+      }
+    myfile.close();
 
 }
 
