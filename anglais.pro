@@ -14,9 +14,11 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    loader.cpp
+    loader.cpp \
+    listfile.cpp
 
 HEADERS  += mainwindow.h \
-    loader.hpp
+    loader.hpp \
+    listfile.h
 
 FORMS    += mainwindow.ui
