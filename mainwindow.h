@@ -20,6 +20,7 @@ public:
 private slots:
     void on_buttonOk_clicked();
     void on_buttonAnswer_clicked();
+    void on_editTranslate_returnPressed();
 
 private:
     Ui::MainWindow *ui;

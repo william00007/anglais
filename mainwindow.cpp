@@ -45,14 +45,11 @@ void MainWindow::on_buttonOk_clicked()
 
 void MainWindow::on_buttonAnswer_clicked()
 {
-    cerr << m_dataBase->getListFrenchWords().at(m_indice);
+    cerr << m_dataBase->getListFrenchWords().at(m_indice) << endl;
     changeTextLabelEnglishWordRandomly();
 }
 
-//void MainWindow::keyPressedEvent(QKeyEvent *event)
-//{
-//    if(event->key() == Qt::Key_Enter)
-//    {
-//        std::cout << "Enter has been press" << std::endl;
-//    }
-//}
+void MainWindow::on_editTranslate_returnPressed()
+{
+    std::cout << "Enter has been press" << std::endl;
+}
