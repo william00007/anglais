@@ -5,9 +5,6 @@ Loader::Loader(const char* filePath) : m_filePath(filePath){
     if(fileExist()){
         cerr << "Fichier déjà existant" << endl;
         loadFile();
-//        m_listFile.showEnglishWords();
-//        m_listFile.showFrenchWords();
-        std::cout << m_listFile.getRandomWord() << std::endl;
     }
     else{
         cerr << "Création du fichier" << endl;
