@@ -50,6 +50,14 @@ void MainWindow::changeTextLabelEnglishWordRandomly(){
 void MainWindow::on_buttonAnswer_clicked()
 {
     cerr << m_dataBase->getListFrenchWords().at(m_indice);
-    m_indice = m_dataBase->getRandomindice();
+    int indice = m_dataBase->getRandomindice();
+    if(m_indice==indice) {
+        if(indice>m_dataBase->size())
+            m_indice = 0;
+        else
+            m_indice = indice + 1;
+    }
+    else
+        m_indice = indice;
     ui->englishWord->setText(QString(m_dataBase->getListEnglishWords().at(m_indice).c_str()) );
 }
