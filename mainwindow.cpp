@@ -49,7 +49,10 @@ void MainWindow::on_buttonAnswer_clicked()
     changeTextLabelEnglishWordRandomly();
 }
 
-void MainWindow::keyPressedEvent(QKeyEvent *event)
-{
-    std::cout << "Enter has been press" << std::endl;
-}
+//void MainWindow::keyPressedEvent(QKeyEvent *event)
+//{
+//    if(event->key() == Qt::Key_Enter)
+//    {
+//        std::cout << "Enter has been press" << std::endl;
+//    }
+//}

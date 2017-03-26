@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QKeyEvent>
 #include "listfile.h"
 
 namespace Ui {
@@ -19,7 +20,6 @@ public:
 private slots:
     void on_buttonOk_clicked();
     void on_buttonAnswer_clicked();
-    void keyPressedEvent(QKeyEvent *event);
 
 private:
     Ui::MainWindow *ui;
