@@ -5,6 +5,8 @@ Loader::Loader(const char* filePath) : m_filePath(filePath){
     if(fileExist()){
         cerr << "Fichier déjà existant" << endl;
         loadFile();
+        m_listFile.showEnglishWords();
+        m_listFile.showFrenchWords();
     }
     else{
         cerr << "Création du fichier" << endl;
@@ -36,7 +38,15 @@ void Loader::loadFile(){
     {
         while ( getline (myfile,line) )
         {
-            m_listEnglish.push_back(line);
+            //  traitement de la ligne récupéré qui suit ce schéma :
+            // [english]:[french]
+
+            int positionToken = line.find(':', 0);
+            string englishWord = line.substr(0, positionToken);
+            string frenchWord = line.substr(positionToken+1, line.find('\r', 0));
+
+            m_listFile.addEnglishWord(englishWord);
+            m_listFile.addFrenchWord(frenchWord);
         }
 
       }

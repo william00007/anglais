@@ -3,13 +3,16 @@
 #include <iostream>
 #include <fstream>
 #include <vector>
+#include <string>
+#include "listfile.h"
+
 using namespace std;
 
 class Loader
 {
 private:
     const char *m_filePath;
-    std::vector<string> m_listEnglish;
+    ListFile m_listFile;
 public:
     Loader(const char* filePath);
     inline bool fileExist () {
