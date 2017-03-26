@@ -62,12 +62,21 @@ int ListFile::size(){
     return listEnglishWords.size();
 }
 
-int ListFile::getRandomindice() {
+int ListFile::getRandomindice(int indice) {
     srand(time(NULL));
-    return rand() % listEnglishWords.size();
+    int ind;
+    if(indice == -1 )
+        ind = rand() % listEnglishWords.size();
+    else{
+        ind = rand() % (listEnglishWords.size() - 1 );
+        if(ind >= indice){
+            ind++;
+        }
+    }
+    return ind;
 }
 
-string ListFile::getRandomWord() {
+string ListFile::getRandomWord(int indice) {
     srand(time(NULL));
-    return listEnglishWords.at(rand() % listEnglishWords.size());
+    return listEnglishWords.at(getRandomindice(indice));
 }

@@ -49,8 +49,8 @@ public:
     void setListEnglishWords(const vector<string> &value);
 
     /// Return a random word
-    string getRandomWord();
-    int getRandomindice();
+    string getRandomWord(int indice);
+    int getRandomindice(int indice);
 };
 
 #endif // LISTFILE
