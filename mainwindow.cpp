@@ -46,3 +46,10 @@ void MainWindow::changeTextLabelEnglishWordRandomly(){
 }
 
 
+
+void MainWindow::on_buttonAnswer_clicked()
+{
+    cerr << m_dataBase->getListFrenchWords().at(m_indice);
+    m_indice = m_dataBase->getRandomindice();
+    ui->englishWord->setText(QString(m_dataBase->getListEnglishWords().at(m_indice).c_str()) );
+}

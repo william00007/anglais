@@ -18,6 +18,7 @@ public:
 
 private slots:
     void on_buttonOk_clicked();
+    void on_buttonAnswer_clicked();
 
 private:
     Ui::MainWindow *ui;

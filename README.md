@@ -14,6 +14,7 @@ exigences principales :
  - afficher les statistiques
  - ajouter messages rouge error lorsque mot incorrecte
  - button réponse
+ - anglais/francais et francais/anglais
 
 exigences secondaire : 
  - ajouter voix prononciation du mot
