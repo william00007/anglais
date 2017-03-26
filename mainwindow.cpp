@@ -22,6 +22,13 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
+
+void MainWindow::changeTextLabelEnglishWordRandomly(){
+    m_indice = m_dataBase->getRandomindice(m_indice);
+    ui->englishWord->setText(QString(m_dataBase->getListEnglishWords().at(m_indice).c_str()) );
+}
+
+
 void MainWindow::on_buttonOk_clicked()
 {
     QString str = ui->editTranslate->toPlainText();
@@ -36,28 +43,8 @@ void MainWindow::on_buttonOk_clicked()
     }
 }
 
-void MainWindow::changeTextLabelEnglishWordRandomly(){
-    int indice = m_dataBase->getRandomindice();
-    while(m_indice==indice)
-        indice = m_dataBase->getRandomindice();
-    m_indice = indice;
-//    m_indice = m_dataBase->getRandomindice();
-    ui->englishWord->setText(QString(m_dataBase->getListEnglishWords().at(m_indice).c_str()) );
-}
-
-
-
 void MainWindow::on_buttonAnswer_clicked()
 {
     cerr << m_dataBase->getListFrenchWords().at(m_indice);
-    int indice = m_dataBase->getRandomindice();
-    if(m_indice==indice) {
-        if(indice>m_dataBase->size())
-            m_indice = 0;
-        else
-            m_indice = indice + 1;
-    }
-    else
-        m_indice = indice;
-    ui->englishWord->setText(QString(m_dataBase->getListEnglishWords().at(m_indice).c_str()) );
+    changeTextLabelEnglishWordRandomly();
 }
