@@ -9,7 +9,7 @@ class ListFile {
 
 private:
     // Attribut(s)
-    vector<string> ListEnglishWords;
+    vector<string> listEnglishWords;
     vector<string> listFrenchWords;
 
 public:
@@ -30,6 +30,14 @@ public:
 
     /// Return the list's size
     int getSizeList();
+
+    /// This function add a new english word in the list
+    void addEnglishWord(string word);
+    void addFrenchWord(string word);
+
+    /// Show the entire list
+    void showEnglishWords();
+    void showFrenchWords();
 
 };
 
