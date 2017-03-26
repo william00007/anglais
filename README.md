@@ -1,6 +1,8 @@
 # TODO :
 
 exigences principales : 
+ - random intelligent
+ - ajout du mot au fichier en respectant l'ordre alphabétique
  - plusieurs définition possible du mot
  - ajout d'expemples
  - multiplateforme
@@ -13,4 +15,4 @@ exigences principales :
  
 
 exigences secondaire : 
- - ajouter voix
+ - ajouter voix prononciation du mot

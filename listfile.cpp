@@ -61,6 +61,7 @@ void ListFile::showFrenchWords() {
 int ListFile::size(){
     return listEnglishWords.size();
 }
+
 string ListFile::getRandomWord() {
     srand(time(NULL));
     return listEnglishWords.at(rand() % listEnglishWords.size());
