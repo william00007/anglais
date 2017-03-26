@@ -31,7 +31,7 @@ void MainWindow::changeTextLabelEnglishWordRandomly(){
 
 void MainWindow::on_buttonOk_clicked()
 {
-    QString str = ui->editTranslate->toPlainText();
+    QString str = ui->editTranslate->text();
     std::string utf8_text = str.toUtf8().constData();
     if(utf8_text.compare(m_dataBase->getListFrenchWords().at(m_indice)) == 0){
         cerr << "bonne réponse" << endl;
@@ -47,4 +47,9 @@ void MainWindow::on_buttonAnswer_clicked()
 {
     cerr << m_dataBase->getListFrenchWords().at(m_indice) << endl;
     changeTextLabelEnglishWordRandomly();
+}
+
+void MainWindow::keyPressedEvent(QKeyEvent *event)
+{
+    std::cout << "Enter has been press" << std::endl;
 }
