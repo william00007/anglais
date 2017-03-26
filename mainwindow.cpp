@@ -49,7 +49,8 @@ void MainWindow::on_buttonAnswer_clicked()
     changeTextLabelEnglishWordRandomly();
 }
 
-void MainWindow::keyPressedEvent(QKeyEvent *event)
+
+void MainWindow::on_editTranslate_returnPressed()
 {
     std::cout << "Enter has been press" << std::endl;
 }
