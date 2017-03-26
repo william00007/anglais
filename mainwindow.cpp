@@ -45,6 +45,6 @@ void MainWindow::on_buttonOk_clicked()
 
 void MainWindow::on_buttonAnswer_clicked()
 {
-    cerr << m_dataBase->getListFrenchWords().at(m_indice);
+    cerr << m_dataBase->getListFrenchWords().at(m_indice) << endl;
     changeTextLabelEnglishWordRandomly();
 }
