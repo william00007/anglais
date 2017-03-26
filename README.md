@@ -12,7 +12,8 @@ exigences principales :
  - appuyer entrer plutot que "ok"
  - onglet ajouter mot
  - afficher les statistiques
- 
+ - ajouter messages rouge error lorsque mot incorrecte
+ - button réponse
 
 exigences secondaire : 
  - ajouter voix prononciation du mot

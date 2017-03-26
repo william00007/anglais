@@ -50,6 +50,7 @@ public:
 
     /// Return a random word
     string getRandomWord();
+    int getRandomindice();
 };
 
 #endif // LISTFILE

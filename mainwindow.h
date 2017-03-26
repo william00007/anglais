@@ -21,6 +21,7 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
+    int m_indice;
     ListFile *m_dataBase;
     void changeTextLabelEnglishWordRandomly();
 };

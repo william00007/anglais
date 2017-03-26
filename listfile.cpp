@@ -62,6 +62,11 @@ int ListFile::size(){
     return listEnglishWords.size();
 }
 
+int ListFile::getRandomindice() {
+    srand(time(NULL));
+    return rand() % listEnglishWords.size();
+}
+
 string ListFile::getRandomWord() {
     srand(time(NULL));
     return listEnglishWords.at(rand() % listEnglishWords.size());
