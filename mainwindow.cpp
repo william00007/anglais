@@ -26,11 +26,8 @@ void MainWindow::on_buttonOk_clicked()
     QString str = ui->editTranslate->toPlainText();
     std::string utf8_text = str.toUtf8().constData();
     changeTextLabelEnglishWordRandomly();
-    cerr << utf8_text << endl;
 }
 
 void MainWindow::changeTextLabelEnglishWordRandomly(){
-    srand(time(NULL));
-    int v1 = rand() % m_dataBase->size();
     ui->englishWord->setText(QString(m_dataBase->getRandomWord().c_str()) );
 }
