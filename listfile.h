@@ -3,6 +3,9 @@
 #include <iostream>
 #include <fstream>
 #include <vector>
+#include <cstdlib>
+#include <time.h>
+
 using namespace std;
 
 class ListFile {
@@ -39,6 +42,8 @@ public:
     void showEnglishWords();
     void showFrenchWords();
 
+    /// Return a random word
+    string getRandomWord();
 };
 
 #endif // LISTFILE
