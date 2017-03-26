@@ -25,9 +25,18 @@ void MainWindow::on_buttonOk_clicked()
 {
     QString str = ui->editTranslate->toPlainText();
     std::string utf8_text = str.toUtf8().constData();
-    changeTextLabelEnglishWordRandomly();
+    if(utf8_text.compare(m_dataBase->getListFrenchWords().at(m_indice)) == 0){
+        cerr << "bonne réponse" << endl;
+        changeTextLabelEnglishWordRandomly();
+    }
+    else{
+        cerr << "mauvaise réponse, veuillez réessayer" << endl;
+    }
 }
 
 void MainWindow::changeTextLabelEnglishWordRandomly(){
-    ui->englishWord->setText(QString(m_dataBase->getRandomWord().c_str()) );
+    m_indice = m_dataBase->getRandomindice();
+    ui->englishWord->setText(QString(m_dataBase->getListEnglishWords().at(m_indice).c_str()) );
 }
+
+
