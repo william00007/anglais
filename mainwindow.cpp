@@ -7,7 +7,8 @@
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow),
-    m_dataBase(new ListFile())
+    m_dataBase(new ListFile()),
+    m_indice(-1)
 {
     ui->setupUi(this);
     Loader myLoader((char*)"../anglais/myDataBase.txt");
