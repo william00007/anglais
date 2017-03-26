@@ -29,6 +29,7 @@ void MainWindow::on_buttonOk_clicked()
     if(utf8_text.compare(m_dataBase->getListFrenchWords().at(m_indice)) == 0){
         cerr << "bonne réponse" << endl;
         changeTextLabelEnglishWordRandomly();
+        ui->editTranslate->setText("");
     }
     else{
         cerr << "mauvaise réponse, veuillez réessayer" << endl;
@@ -36,7 +37,11 @@ void MainWindow::on_buttonOk_clicked()
 }
 
 void MainWindow::changeTextLabelEnglishWordRandomly(){
-    m_indice = m_dataBase->getRandomindice();
+    int indice = m_dataBase->getRandomindice();
+    while(m_indice==indice)
+        indice = m_dataBase->getRandomindice();
+    m_indice = indice;
+//    m_indice = m_dataBase->getRandomindice();
     ui->englishWord->setText(QString(m_dataBase->getListEnglishWords().at(m_indice).c_str()) );
 }
 
