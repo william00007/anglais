@@ -30,8 +30,7 @@ void MainWindow::on_buttonOk_clicked()
 }
 
 void MainWindow::changeTextLabelEnglishWordRandomly(){
-
     srand(time(NULL));
     int v1 = rand() % m_dataBase->size();
-    ui->englishWord->setText(QString(m_dataBase->getListEnglishWords().at(v1).c_str()) );
+    ui->englishWord->setText(QString(m_dataBase->getRandomWord().c_str()) );
 }

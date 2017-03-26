@@ -3,6 +3,9 @@
 #include <iostream>
 #include <fstream>
 #include <vector>
+#include <cstdlib>
+#include <time.h>
+
 using namespace std;
 
 class ListFile {
@@ -40,11 +43,13 @@ public:
     void showFrenchWords();
     int size();
 
-
     vector<string> getListFrenchWords() const;
     void setListFrenchWords(const vector<string> &value);
     vector<string> getListEnglishWords() const;
     void setListEnglishWords(const vector<string> &value);
+
+    /// Return a random word
+    string getRandomWord();
 };
 
 #endif // LISTFILE

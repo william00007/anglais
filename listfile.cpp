@@ -35,6 +35,7 @@ int ListFile::searchWord(string word) {
 
 }
 
+// [TODO]
 // changer ces 2 fonctions plus tard pour ajouter
 // un mot en respectant l'ordre alphabétique
 void ListFile::addEnglishWord(string word) {
@@ -59,4 +60,8 @@ void ListFile::showFrenchWords() {
 
 int ListFile::size(){
     return listEnglishWords.size();
+}
+string ListFile::getRandomWord() {
+    srand(time(NULL));
+    return listEnglishWords.at(rand() % listEnglishWords.size());
 }
