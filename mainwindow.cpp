@@ -6,14 +6,12 @@
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
-    ui(new Ui::MainWindow)
+    ui(new Ui::MainWindow),
+    m_dataBase(new ListFile())
 {
     ui->setupUi(this);
     Loader myLoader((char*)"myDataBase.txt");
-    m_listEnglish.push_back("ok");
-    m_listEnglish.push_back("pas bon");
-    m_listEnglish.push_back("voici");
-    m_listEnglish.push_back("wtf?");
+    myLoader.loadFile(m_dataBase);
     changeTextLabelEnglishWordRandomly();
 }
 
@@ -34,6 +32,6 @@ void MainWindow::on_buttonOk_clicked()
 void MainWindow::changeTextLabelEnglishWordRandomly(){
 
     srand(time(NULL));
-    int v1 = rand() % m_listEnglish.size();
-    ui->englishWord->setText(QString((char*)m_listEnglish.at(v1)) );
+    int v1 = rand() % m_dataBase->size();
+    ui->englishWord->setText(QString(m_dataBase->getListEnglishWords().at(v1).c_str()) );
 }

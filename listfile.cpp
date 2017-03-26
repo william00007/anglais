@@ -2,6 +2,26 @@
 #include <iostream>
 
 // Constructor(s)
+vector<string> ListFile::getListFrenchWords() const
+{
+    return listFrenchWords;
+}
+
+void ListFile::setListFrenchWords(const vector<string> &value)
+{
+    listFrenchWords = value;
+}
+
+vector<string> ListFile::getListEnglishWords() const
+{
+    return listEnglishWords;
+}
+
+void ListFile::setListEnglishWords(const vector<string> &value)
+{
+    listEnglishWords = value;
+}
+
 ListFile::ListFile(){
 
 }
@@ -35,4 +55,8 @@ void ListFile::showFrenchWords() {
     for(int i=0; i<listFrenchWords.size(); i++) {
         std::cout << listFrenchWords.at(i) << std::endl;
     }
+}
+
+int ListFile::size(){
+    return listEnglishWords.size();
 }

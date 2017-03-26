@@ -38,7 +38,13 @@ public:
     /// Show the entire list
     void showEnglishWords();
     void showFrenchWords();
+    int size();
 
+
+    vector<string> getListFrenchWords() const;
+    void setListFrenchWords(const vector<string> &value);
+    vector<string> getListEnglishWords() const;
+    void setListEnglishWords(const vector<string> &value);
 };
 
 #endif // LISTFILE

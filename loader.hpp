@@ -21,6 +21,8 @@ public:
     }
     void showFile();
     void loadFile();
+    void loadFile(ListFile *list);
+
 
 
 };

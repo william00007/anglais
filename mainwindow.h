@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "listfile.h"
 
 namespace Ui {
 class MainWindow;
@@ -20,7 +21,7 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
-    std::vector<char*> m_listEnglish;
+    ListFile *m_dataBase;
     void changeTextLabelEnglishWordRandomly();
 };
 
