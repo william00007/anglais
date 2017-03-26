@@ -1,6 +1,5 @@
 #include "mainwindow.h"
 #include "loader.hpp"
-#include "keypress.h"
 #include <QApplication>
 
 int main(int argc, char *argv[])

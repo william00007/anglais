@@ -51,5 +51,6 @@ void MainWindow::on_buttonAnswer_clicked()
 
 void MainWindow::on_editTranslate_returnPressed()
 {
-    std::cout << "Enter has been press" << std::endl;
+//    std::cout << "Enter has been press" << std::endl;
+    on_buttonOk_clicked();
 }
