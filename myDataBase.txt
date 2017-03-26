@@ -1,0 +1,5 @@
+today:aujourd'hui
+now:maintenant
+obviously:évidemment
+and so on:etc
+mess:désordre

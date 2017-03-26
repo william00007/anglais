@@ -10,7 +10,7 @@ MainWindow::MainWindow(QWidget *parent) :
     m_dataBase(new ListFile())
 {
     ui->setupUi(this);
-    Loader myLoader((char*)"myDataBase.txt");
+    Loader myLoader((char*)"../anglais/myDataBase.txt");
     myLoader.loadFile(m_dataBase);
     changeTextLabelEnglishWordRandomly();
 }
