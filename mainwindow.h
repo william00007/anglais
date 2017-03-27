@@ -4,7 +4,7 @@
 #include <QMainWindow>
 #include <QKeyEvent>
 #include "listfile.h"
-
+#include "loader.hpp"
 namespace Ui {
 class MainWindow;
 }
@@ -22,7 +22,12 @@ private slots:
     void on_buttonAnswer_clicked();
     void on_editTranslate_returnPressed();
 
+    void on_pushButton_clicked();
+
+    void on_lineEditEn_returnPressed();
+
 private:
+    Loader *m_myLoader;
     Ui::MainWindow *ui;
     int m_indice;
     ListFile *m_dataBase;

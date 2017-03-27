@@ -22,6 +22,7 @@ public:
     void showFile();
     void loadFile();
     void loadFile(ListFile *list);
+    void addWords(string frenchWord, string englishWord);
 
 
 

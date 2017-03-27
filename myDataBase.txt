@@ -3,3 +3,6 @@ now:maintenant
 obviously:évidemment
 and so on:etc
 mess:désordre
+eat:manger
+drink:boire
+en fait:actually

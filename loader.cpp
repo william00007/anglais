@@ -47,7 +47,7 @@ void Loader::loadFile(){
             m_listFile.addFrenchWord(frenchWord);
         }
 
-      }
+    }
     myfile.close();
 
 }
@@ -69,6 +69,11 @@ void Loader::loadFile(ListFile *list){
             list->addFrenchWord(frenchWord);
         }
 
-      }
+    }
     myfile.close();
+}
+void Loader::addWords(string frenchWord, string englishWord){
+    std::ofstream outfile;
+    outfile.open(m_filePath, std::ios_base::app);
+    outfile << englishWord << ":" << frenchWord<< endl;
 }

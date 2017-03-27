@@ -45,6 +45,10 @@ void ListFile::addEnglishWord(string word) {
 void ListFile::addFrenchWord(string word) {
     listFrenchWords.push_back(word);
 }
+void ListFile::addEnFrWord(string englishWord, string frenchWord){
+    addEnglishWord(englishWord);
+    addFrenchWord(frenchWord);
+}
 
 void ListFile::showEnglishWords() {
     for(int i=0; i<listEnglishWords.size(); i++) {

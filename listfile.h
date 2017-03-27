@@ -37,6 +37,7 @@ public:
     /// This function add a new english word in the list
     void addEnglishWord(string word);
     void addFrenchWord(string word);
+    void addEnFrWord(string englishWord, string frenchWord);
 
     /// Show the entire list
     void showEnglishWords();
